@@ -5,6 +5,7 @@ FROM ubuntu:24.10
 #WORKDIR /home/ubuntu
 #SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #RUN echo 'ubuntu:ubuntu' | chpasswd
+RUN mount --make-rshared /
 RUN apt update 
 RUN apt-get install wget -y
 RUN apt-get install net-tools -y
