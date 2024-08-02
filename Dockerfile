@@ -6,7 +6,7 @@ FROM ubuntu:24.10
 #SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #RUN echo 'ubuntu:ubuntu' | chpasswd
 #RUN mount --make-rshared /
-RUN --security=insecure
+RUN --security=insecure cat /proc/self/status | grep CapEff
 RUN apt update 
 RUN apt-get install wget -y
 RUN apt-get install net-tools -y
